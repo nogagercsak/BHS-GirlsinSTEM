@@ -13,6 +13,7 @@ body {
   overflow: auto; 
 } 
 
+
 h1 {
   font-family: 'Playwrite IT Moderna', cursive;
   color: #DBBADD;
@@ -22,7 +23,7 @@ h1 {
   justify-content: center;  
   text-align: center;
   height: 100vh;
-  margin: 200px;
+  margin-top: 200px;
   padding: 0;
   overflow: hidden; 
 }
