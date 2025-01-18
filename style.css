@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Indie+Flower&family=Kalnia+Glaze:wght@100..700&family=Luckiest+Guy&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 
 /* Base Styles */
+
+main {
+  width: 100%;
+  padding-top: 100px; /* This creates space for the fixed nav */
+}
 body {
   background-color: #D8E1FF;
   background-image: linear-gradient(315deg, #D8E1FF 0%, #f3e7e9 74%);
@@ -21,8 +26,10 @@ h1 {
   color: #DBBADD;
   font-size: 60px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin-top: 80px; /* Increased from 20px */
   transition: transform 0.3s ease;
+  position: relative; /* Add this */
+  z-index: 1; /* Add this - makes sure it's above the background but below nav */
 }
 
 h1:hover {
@@ -38,9 +45,9 @@ h2 {
   margin-bottom: 20px;
 }
 
-p {
+h3 {
   font-family: "Playwrite IT Moderna", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   color: #BE92A2;
   line-height: 1.8;
   max-width: 800px;
@@ -49,16 +56,28 @@ p {
   animation: fadeIn 1s ease-in forwards;
 }
 
+p {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: #BE92A2;
+  line-height: 1.8;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeIn 1s ease-in forwards;
+
+}
+
 /* Navigation */
 nav {
   position: fixed;
-  top: 20px;
+  top: 0; /* Changed from 20px */
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 15px 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3); /* Made slightly more visible */
   backdrop-filter: blur(5px);
   z-index: 1000;
 }
