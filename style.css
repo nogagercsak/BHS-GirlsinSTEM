@@ -283,14 +283,37 @@ button:hover, .button:hover {
   to { transform: rotate(360deg); }
 }
 
-/* Scroll Indicator */
-.scroll-progress {
-  position: fixed;
+/* Style for the content-section */
+.content-section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Container for the iframe */
+.responsive-iframe-container {
+  position: relative;
+  width: 100%; /* Full width */
+  max-width: 960px; /* Optional: Maximum width of the slideshow */
+  margin: 0 auto; /* Center the container */
+  padding-bottom: 59.27%; /* Aspect ratio: 569/960 = 59.27% */
+  height: 0; /* Set height to 0 to use padding for aspect ratio */
+  overflow: hidden;
+}
+
+/* Make iframe responsive */
+.responsive-iframe-container iframe {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, #ff85aa, #DBBADD);
-  transform-origin: 0%;
-  z-index: 1001;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  border: none;
 }
+
+/* Adjust the font size for the heading on smaller screens */
+@media (max-width: 768px) {
+  .content-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
